@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Beat Procrastination | FAST NUCES Lahore Civics Project</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #1e2a2f;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.8rem;
+        }
+        /* NAVBAR */
+        .navbar {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background: rgba(255, 255, 245, 0.96);
+        }
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #e85d04, #f48c06);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-weight: 500;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e2f;
+            transition: 0.2s;
+        }
+        .nav-links a:hover { color: #e85d04; }
+        /* HERO */
+        .hero {
+            padding: 2.5rem 0 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .hero-text { flex: 1; }
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #dc2f02, #e85d04);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            margin: 1rem 0 1.5rem;
+            color: #3b5245;
+        }
+        .hero-img { flex: 0.8; text-align: center; }
+        .hero-img img {
+            max-width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+        }
+        .stats-badge {
+            background: #fff2e5;
+            padding: 0.6rem 1.2rem;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        /* COUNTER SECTION */
+        .counter-section {
+            background: #fff6ea;
+            border-radius: 2rem;
+            padding: 1.6rem;
+            text-align: center;
+            margin: 2rem 0;
+            border: 1px solid #ffe0b5;
+        }
+        .counter-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: #e85d04;
+            color: white;
+            padding: 0.2rem 1.5rem;
+            border-radius: 80px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+        .counter-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-counter {
+            background: #2c3e2f;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-counter:hover { background: #e85d04; transform: scale(0.97); }
+        /* section titles */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            border-left: 6px solid #e85d04;
+            padding-left: 1rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .technique-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.6rem;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.07);
+            border: 1px solid #ffe2c7;
+            transition: 0.2s;
+        }
+        .technique-card:hover { transform: translateY(-5px); border-color: #f7b05e; }
+        .card-icon {
+            font-size: 2.2rem;
+            background: #fb8b2c20;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+        }
+        .video-wrapper {
+            margin: 1.5rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            border: 0;
+        }
+        .insight-list {
+            margin: 1rem 0;
+            padding-left: 1.2rem;
+        }
+        .case-box {
+            background: #fef1e6;
+            border-radius: 1.5rem;
+            padding: 1.4rem;
+            margin: 1rem 0;
+        }
+        .impact-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 1rem 1.8rem;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+        /* Instagram specific row */
+        .instagram-highlight {
+            background: linear-gradient(115deg, #fdf4e3, #fff3e6);
+            border-radius: 2rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            border: 1px solid #ffd7a5;
+        }
+        .ig-btn {
+            background: #e1306c;
+            padding: 0.8rem 1.6rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            box-shadow: 0 6px 14px rgba(225,48,108,0.3);
+        }
+        .ig-btn:hover { background: #c01d5a; transform: scale(1.02); }
+        footer {
+            background: #1e2a2f;
+            color: #e9d6c0;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-radius: 2rem 2rem 0 0;
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        @media (max-width: 720px) {
+            .hero { flex-direction: column; }
+            .nav-flex { flex-direction: column; gap: 0.8rem; }
+        }
+        .research-note {
+            background: #e9f5e9;
+            padding: 1.2rem;
+            border-radius: 1.2rem;
+        }
+        .inline-img {
+            width: 100%;
+            border-radius: 20px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="logo">⏳ <span>lateNeverComes</span> | FAST Civics</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#techniques">Techniques</a>
+            <a href="#ted-resources">TED Talks</a>
+            <a href="#research">Research</a>
+            <a href="#impact">Impact</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="container" id="home">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-text">
+                <div class="stats-badge">
+                    <i class="fas fa-chart-line"></i> 80-95% students procrastinate
+                </div>
+                <h1>Break the <br> Procrastination Loop.</h1>
+                <p>Empowering FAST NUCEs Lahore with evidence-based productivity techniques. Our community service campaign reached <strong>120+ students</strong> through Instagram & workshops — sharing Pomodoro, Eisenhower Matrix & 2-Minute Rule to build healthier study habits.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <span style="background:#e85d04; color:white; padding:0.5rem 1rem; border-radius:40px;"><i class="fas fa-calendar-alt"></i> Spring 2026</span>
+                    <span style="background:#2c3e2f20; padding:0.5rem 1rem; border-radius:40px;"><i class="fab fa-instagram"></i> @lateNeverComes</span>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://picsum.photos/id/20/500/400" alt="focused student" style="border-radius: 2rem; width:100%; max-width:400px;">
+            </div>
+        </div>
+
+        <!-- INSTAGRAM PAGE SPECIFIC BLOCK (prominent) -->
+        <div class="instagram-highlight">
+            <div>
+                <i class="fab fa-instagram" style="font-size: 2.5rem; color:#e1306c;"></i>
+                <h2 style="margin: 0.3rem 0 0 0;">Our Official Awareness Page</h2>
+                <p style="margin: 0.3rem 0;">Daily motivation, productivity techniques & anti-procrastination posts for FAST students.</p>
+            </div>
+            <a href="https://www.instagram.com/lateNeverComes" target="_blank" class="ig-btn">
+                <i class="fab fa-instagram fa-lg"></i> Follow @lateNeverComes
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- INTERACTIVE COUNTER -->
+        <div class="counter-section">
+            <div class="counter-box">
+                <i class="fas fa-users" style="font-size: 2rem; color:#e85d04;"></i>
+                <h3>Students inspired through our campaign</h3>
+                <div class="counter-number" id="impactCounter">0</div>
+                <div class="counter-buttons">
+                    <button class="btn-counter" id="incrementBtn"><i class="fas fa-plus-circle"></i> +1 Inspired</button>
+                    <button class="btn-counter" id="resetBtn"><i class="fas fa-undo-alt"></i> Reset</button>
+                </div>
+                <div class="counter-message" id="counterMsg" style="margin-top: 10px; font-size:0.9rem;">✨ each click = one more student adopting productivity ✨</div>
+            </div>
+        </div>
+
+        <!-- TECHNIQUES SECTION -->
+        <div id="techniques">
+            <div class="section-title"><i class="fas fa-brain"></i> Core Productivity Techniques</div>
+            <div class="card-grid">
+                <div class="technique-card">
+                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3>🍅 Pomodoro Technique</h3>
+                    <p>Francesco Cirillo (1980s). Work in focused sprints to defeat burnout.</p>
+                    <ul class="insight-list">
+                        <li>✅ 25 min deep work → 5 min break</li>
+                        <li>✅ After 4 cycles → longer break (15-20 min)</li>
+                        <li>✅ Reduces mental fatigue & improves concentration</li>
+                    </ul>
+                    <!-- Pomodoro TED / resource video: embed from YouTube (TED talk about procrastination & pomodoro principles) -->
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/arj7oStGLkU" title="TED Talk on Procrastination & Pomodoro" allowfullscreen></iframe>
+                    </div>
+                    <small>📺 TED: Inside the mind of a master procrastinator + Pomodoro insights</small>
+                </div>
+                <div class="technique-card">
+                    <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+                    <h3>📊 Eisenhower Matrix</h3>
+                    <p>Prioritize urgent/important tasks. Stop last-minute chaos.</p>
+                    <ul class="insight-list">
+                        <li>🔹 Urgent & Important → Do First</li>
+                        <li>🔹 Important, Not Urgent → Schedule</li>
+                        <li>🔹 Urgent, Not Important → Delegate</li>
+                        <li>🔹 Neither → Eliminate</li>
+                    </ul>
+                    <img src="https://picsum.photos/id/169/300/150" alt="matrix visual" style="width:100%; border-radius: 20px; margin-top: 8px;">
+                </div>
+                <div class="technique-card">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>⚡ 2-Minute Rule</h3>
+                    <p>From "Atomic Habits" by James Clear: if a task takes less than 2 minutes, do it immediately.</p>
+                    <ul class="insight-list">
+                        <li>✔️ Beat small delays</li>
+                        <li>✔️ Build momentum for larger tasks</li>
+                    </ul>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VAK6pPpKzlk" title="2 Minute Rule & Productivity TED Talk" allowfullscreen></iframe>
+                    </div>
+                    <small>🎤 TED Short: How to stop procrastinating (feat. 2-min rule strategies)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEDICATED TED TALKS RESOURCES SECTION (extra video links) -->
+        <div id="ted-resources">
+            <div class="section-title"><i class="fab fa-youtube"></i> Must-Watch TED Talks on Procrastination & Pomodoro</div>
+            <div class="card-grid" style="margin-bottom: 1rem;">
+                <div class="technique-card" style="background: #fffbf5;">
+                    <h3><i class="fab fa-ted"></i> Tim Urban: Inside the Mind of a Master Procrastinator</h3>
+                    <p>Classic TED talk that explains the "Instant Gratification Monkey" and how deadlines force action. Essential for every student.</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/arj7oStGLkU" title="Tim Urban TED Talk" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="technique-card" style="background: #fffbf5;">
+                    <h3><i class="fas fa-hourglass-start"></i> The Pomodoro Technique Explained (TEDx Talk)</h3>
+                    <p>Learn how splitting work into intervals boosts focus and prevents burnout — a perfect companion to our campaign.</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/la5zFfXvG6c" title="Pomodoro Technique TEDx" allowfullscreen></iframe>
+                    </div>
+                    <small>🎯 TEDx Talk: Master your focus with Pomodoro</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESEARCH + CASE STUDIES (no FAST students helping section removed) -->
+        <div id="research">
+            <div class="section-title"><i class="fas fa-flask"></i> Research & Case Studies (FAST Context)</div>
+            <div class="research-note">
+                <p><strong>📊 Root Causes at FAST NUCEs:</strong> Based on our questionnaires: emotional regulation, perfectionism, poor time management, task aversion & smartphone distraction. 85% of surveyed students reported last-minute cramming and elevated stress. Our findings align with Steel (2007) and Pychyl & Flett (2012).</p>
+            </div>
+            <div class="card-grid" style="margin-top: 1rem;">
+                <div class="case-box">
+                    <i class="fas fa-user-graduate" style="font-size: 1.6rem;"></i>
+                    <h3>📖 Case Study A: Final Year Student (Vietnam.vn)</h3>
+                    <p>A student delayed IELTS exam prep for 3 years waiting for "perfect block". Cramming led to severe sleep deprivation. Lesson: Start small and iterate.</p>
+                </div>
+                <div class="case-box">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>📌 Case Study B: 'Busy' Student (Makassar State Univ)</h3>
+                    <p>Active in organizations—Intention-action gap leads to physical anxiety. Solution: micro-tasking & accountability.</p>
+                </div>
+                <div class="case-box">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>🎨 Case Study C: Design Student (Loughborough)</h3>
+                    <p>Research phases delayed more than sketching. Uncertainty fuels procrastination; break ambiguous tasks into atomic steps.</p>
+                </div>
+            </div>
+            <div style="background: #faf0e3; border-radius: 1.5rem; padding: 1rem; margin: 1rem 0;">
+                <i class="fas fa-chart-simple"></i> <strong>Key statistics from literature & our campaign:</strong> <br>
+                • 80-95% chronic procrastination among university students (Steel, 2007)<br>
+                • 75% students report grades affected by procrastination (Klingsieck, 2013)<br>
+                • Our Instagram page @lateNeverComes gained <strong>70+ followers</strong>, 70+ shares, walking workshop 30+ attendees & 70+ pamphlets.
+            </div>
+        </div>
+
+        <!-- IMPACT SECTION (Community Service) -->
+        <div id="impact">
+            <div class="section-title"><i class="fas fa-hand-sparkles"></i> Community Service Impact</div>
+            <div class="impact-stats">
+                <div class="stat-card"><i class="fab fa-instagram fa-2x"></i><br><strong>70+</strong><br>Followers Gained</div>
+                <div class="stat-card"><i class="fas fa-heart fa-2x"></i><br><strong>70+</strong><br>Likes & Shares</div>
+                <div class="stat-card"><i class="fas fa-chalkboard-user fa-2x"></i><br><strong>30+</strong><br>Walking workshop students</div>
+                <div class="stat-card"><i class="fas fa-pager fa-2x"></i><br><strong>70+</strong><br>Pamphlets & Posters</div>
+            </div>
+            <p><strong>✅ Impact Statement:</strong> Through our Instagram page <strong>@lateNeverComes</strong> and physical campus engagement, we reached approximately <strong>120 FAST students</strong>. Positive feedback confirms that awareness about Pomodoro, Eisenhower Matrix and procrastination loops motivated students to adopt better study habits. The Instagram page remains active to help future cohorts beyond the assignment period.</p>
+            
+            <!-- Recommendations -->
+            <div class="section-title" style="margin-top: 2rem;"><i class="fas fa-list-check"></i> Recommendations for FAST NUCEs</div>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>🔹 Create official productivity Instagram page managed by FAST societies (inspired by @lateNeverComes).</li>
+                <li>🔹 Monthly workshops on Pomodoro, Eisenhower Matrix & 2-Minute Rule.</li>
+                <li>🔹 Dedicated phone-locked study zones in library & classrooms.</li>
+                <li>🔹 Faculty break large projects into small milestones with AI-assisted planning.</li>
+                <li>🔹 Formal peer accountability groups moderated by staff to track productivity goals.</li>
+            </ul>
+            <img src="https://picsum.photos/id/155/800/200" alt="campus workshop" class="inline-img" style="max-height:180px; object-fit:cover;">
+        </div>
+    </div>
+
+    <!-- Footer with names and Instagram handle -->
+    <footer>
+        <div class="container footer-flex">
+            <div>
+                <h3 style="color:#fb8b2c;">⏳ lateNeverComes</h3>
+                <p>Civics & Community Management Project<br>FAST National University, Lahore</p>
+                <div style="margin-top: 0.5rem; line-height: 1.6;">
+                    <i class="fas fa-user"></i> <strong>Muhammad Usman Khan</strong> (25L-2003)<br>
+                    <i class="fas fa-user"></i> <strong>Khanan Ali</strong> (25L-3034)<br>
+                    <i class="fas fa-user"></i> <strong>Faizan Ahmed</strong> (25L-3098)<br>
+                    <i class="fas fa-user"></i> <strong>Muhammad Hunain</strong> (25L-3108)<br>
+                    <i class="fas fa-user"></i> <strong>Muhammad Raheel</strong> (25L-3115)
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <a href="https://www.instagram.com/lateNeverComes" target="_blank" class="ig-btn" style="background:#e1306c; padding:0.6rem 1.2rem; font-size:0.9rem;">
+                    <i class="fab fa-instagram"></i> @lateNeverComes
+                </a>
+                <p style="margin-top: 1rem;"><i class="fas fa-envelope"></i> civics.fast@project.com</p>
+                <p><i class="fas fa-tag"></i> #BeatProcrastinationFAST</p>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; font-size: 0.75rem; margin-top: 1.8rem; border-top: 1px solid #3e5a4b; padding-top: 1rem;">
+            © 2026 Community Service Project | Based on Steel (2007), Pychyl & Flett (2012), Clear (Atomic Habits), Cirillo Technique.
+        </div>
+    </footer>
+</main>
+
+<script>
+    // COUNTER with localStorage persistence (students inspired)
+    let count = 0;
+    const counterDisplay = document.getElementById('impactCounter');
+    const incrementBtn = document.getElementById('incrementBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const counterMsgSpan = document.getElementById('counterMsg');
+
+    function loadCounter() {
+        const saved = localStorage.getItem('procrastinationAwarenessCounter');
+        if (saved !== null && !isNaN(parseInt(saved))) {
+            count = parseInt(saved);
+        } else {
+            // initializing with real outreach baseline: 70 followers + 30 workshop attendees ≈ 100 inspired baseline
+            count = 102;
+        }
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        counterDisplay.innerText = count;
+        localStorage.setItem('procrastinationAwarenessCounter', count);
+        if (count >= 150) {
+            counterMsgSpan.innerHTML = "🎉 Phenomenal! 150+ students breaking the procrastination loop! Keep sharing @lateNeverComes 🎉";
+        } else if (count >= 120) {
+            counterMsgSpan.innerHTML = "🔥 120+ students impacted! Our awareness campaign is making real change! 🔥";
+        } else if (count >= 70) {
+            counterMsgSpan.innerHTML = "💪 Great progress! Every inspired student builds a productive FAST community. 💪";
+        } else {
+            counterMsgSpan.innerHTML = "✨ Click +1 for each student adopting Pomodoro & techniques. Share the Instagram page! ✨";
+        }
+    }
+
+    function incrementCounter() {
+        count++;
+        updateDisplay();
+        incrementBtn.style.transform = "scale(0.96)";
+        setTimeout(() => { incrementBtn.style.transform = ""; }, 150);
+    }
+
+    function resetCounter() {
+        if (confirm("Reset the inspired student counter? This reflects total reach of our campaign.")) {
+            count = 0;
+            updateDisplay();
+            resetBtn.style.transform = "scale(0.96)";
+            setTimeout(() => { resetBtn.style.transform = ""; }, 150);
+        }
+    }
+
+    incrementBtn.addEventListener('click', incrementCounter);
+    resetBtn.addEventListener('click', resetCounter);
+    loadCounter();
+
+    // smooth hover effects for stat cards
+    const statCards = document.querySelectorAll('.stat-card');
+    statCards.forEach(card => {
+        card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-5px)');
+        card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
+    });
+
+    console.log("FAST Civics - Procrastination & Productivity | Instagram @lateNeverComes");
+</script>
+</body>
+</html>
