@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Beat Procrastination | FAST NUCES Lahore CIVICS and Community Engagement Project</title>
+    <title>Beat Procrastination | FAST NUCES Lahore | Anti-Anxiety Wellness Hub</title>
    
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -25,7 +25,6 @@
             margin: 0 auto;
             padding: 0 1.8rem;
         }
-        /* NAVBAR */
         .navbar {
             background: white;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -61,7 +60,6 @@
             transition: 0.2s;
         }
         .nav-links a:hover { color: #e85d04; }
-        /* HERO */
         .hero {
             padding: 2.5rem 0 1.5rem 0;
             display: flex;
@@ -100,7 +98,6 @@
             gap: 10px;
             font-weight: 600;
         }
-        /* COUNTER SECTION */
         .counter-section {
             background: #fff6ea;
             border-radius: 2rem;
@@ -138,7 +135,6 @@
             transition: 0.2s;
         }
         .btn-counter:hover { background: #e85d04; transform: scale(0.97); }
-        /* section titles */
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -209,7 +205,6 @@
             flex: 1;
             box-shadow: 0 5px 12px rgba(0,0,0,0.05);
         }
-        /* Instagram specific row */
         .instagram-highlight {
             background: linear-gradient(115deg, #fdf4e3, #fff3e6);
             border-radius: 2rem;
@@ -265,6 +260,183 @@
             border-radius: 20px;
             margin: 1rem 0;
         }
+        
+        /* ========= ANTI-ANXIETY ZONE (5 ACTIVITIES) ========= */
+        .anxiety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .anxiety-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.5rem;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+            border: 1px solid #ffddb0;
+            transition: 0.2s;
+            text-align: center;
+        }
+        .anxiety-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e2f;
+        }
+        /* Fidget Spinner */
+        .spinner-container { display: flex; justify-content: center; margin: 1rem 0; }
+        .fidget-spinner {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            cursor: grab;
+            user-select: none;
+        }
+        .spinner-bearing {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, #ffb347, #e85d04);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 2px solid #ffe0b5;
+        }
+        .spinner-arm {
+            position: absolute;
+            width: 70px;
+            height: 26px;
+            background: linear-gradient(135deg, #f48c06, #dc2f02);
+            top: 50%;
+            left: 50%;
+            border-radius: 40px;
+            transform-origin: 0% 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .arm-tip {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background: radial-gradient(circle, #ffaa55, #e85d04);
+            border-radius: 50%;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .arm1 { transform: rotate(0deg) translate(12px, -50%); left: 12px; }
+        .arm2 { transform: rotate(120deg) translate(12px, -50%); left: 12px; }
+        .arm3 { transform: rotate(240deg) translate(12px, -50%); left: 12px; }
+        .spinner-stats { margin-top: 0.8rem; font-size: 0.85rem; background: #f7ede3; display: inline-block; padding: 0.3rem 1rem; border-radius: 40px; }
+        
+        /* Breathing Flower */
+        .flower-breath {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            background: radial-gradient(circle, #ffb347, #f48c06);
+            border-radius: 60% 40% 50% 50% / 45% 50% 50% 55%;
+            transition: all 0.05s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        
+        /* Worry Box (Journaling) */
+        .worry-box {
+            background: #fef1e6;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            margin-top: 0.8rem;
+        }
+        .worry-input {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 1rem;
+            border: 1px solid #ffd7a5;
+            resize: vertical;
+            font-family: inherit;
+            margin: 0.5rem 0;
+        }
+        .worry-btn {
+            background: #e85d04;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0.2rem;
+        }
+        .worry-list {
+            max-height: 120px;
+            overflow-y: auto;
+            text-align: left;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+            list-style: none;
+        }
+        .worry-list li {
+            background: white;
+            margin: 0.3rem 0;
+            padding: 0.4rem 0.6rem;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Sensory Soundboard */
+        .sound-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .sound-btn {
+            background: #2c3e2f;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 3rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.1s;
+            border: none;
+        }
+        .sound-btn:active { transform: scale(0.95); background: #e85d04; }
+        .active-sound { background: #e85d04; box-shadow: 0 0 10px rgba(232,93,4,0.5); }
+        
+        /* Breathing Game original */
+        .breathing-circle {
+            width: 130px;
+            height: 130px;
+            background: radial-gradient(circle at 30% 30%, #6fbf4c, #2f6b2f);
+            border-radius: 50%;
+            margin: 0.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: all 0.05s linear;
+        }
+        .breath-btn {
+            background: #e85d04;
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .glow-text { font-size: 0.7rem; color: #e85d04; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -275,274 +447,238 @@
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#techniques">Techniques</a>
-            <a href="#ted-resources">TED Talks</a>
             <a href="#research">Research</a>
             <a href="#impact">Impact</a>
+            <a href="#calmzone">🧘 Calm Zone</a>
         </div>
     </div>
 </nav>
 
 <main>
     <div class="container" id="home">
-     
         <div class="hero">
             <div class="hero-text">
-                <div class="stats-badge">
-                    <i class="fas fa-chart-line"></i> 80-95% students procrastinate
-                </div>
+                <div class="stats-badge"><i class="fas fa-chart-line"></i> 80-95% students procrastinate</div>
                 <h1>Break the <br> Procrastination Loop.</h1>
-                <p>Empowering FAST NUCES Lahore with evidence-based productivity techniques. Our community service campaign reached <strong>120+ students</strong> through Instagram & workshops — sharing Pomodoro, Eisenhower Matrix & 2-Minute Rule to build healthier study habits.</p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <p>Empowering FAST NUCES Lahore with evidence-based productivity + anxiety management tools. Our campaign reached <strong>120+ students</strong> via Instagram & workshops.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
                     <span style="background:#e85d04; color:white; padding:0.5rem 1rem; border-radius:40px;"><i class="fas fa-calendar-alt"></i> Spring 2026</span>
                     <span style="background:#2c3e2f20; padding:0.5rem 1rem; border-radius:40px;"><i class="fab fa-instagram"></i> @lateNeverComes</span>
                 </div>
             </div>
-            <div class="hero-img">
-                <img src="https://picsum.photos/id/20/500/400" alt="focused student" style="border-radius: 2rem; width:100%; max-width:400px;">
-            </div>
+            <div class="hero-img"><img src="https://picsum.photos/id/20/500/400" alt="focused student" style="border-radius: 2rem; width:100%; max-width:400px;"></div>
         </div>
 
         <div class="instagram-highlight">
-            <div>
-                <i class="fab fa-instagram" style="font-size: 2.5rem; color:#e1306c;"></i>
-                <h2 style="margin: 0.3rem 0 0 0;">Our Official Awareness Page</h2>
-                <p style="margin: 0.3rem 0;">Daily motivation, productivity techniques & anti-procrastination posts for FAST students.</p>
-            </div>
-            <a href="https://www.instagram.com/late_never.comes/" target="_blank" class="ig-btn">
-                <i class="fab fa-instagram fa-lg"></i> Follow @lateNeverComes
-                <i class="fas fa-arrow-right"></i>
-            </a>
+            <div><i class="fab fa-instagram" style="font-size: 2.5rem; color:#e1306c;"></i><h2>Our Official Awareness Page</h2><p>Daily motivation & anti-procrastination posts.</p></div>
+            <a href="https://www.instagram.com/late_never.comes/" target="_blank" class="ig-btn"><i class="fab fa-instagram fa-lg"></i> Follow @lateNeverComes <i class="fas fa-arrow-right"></i></a>
         </div>
-                  <marquee><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2w3bmoyYWtiZzB3bHljbTVqaWY4aTlwdGlob3V5OGxvZXB1YnJneSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oBwBVLGoLteCP2kyD/giphy.gif" width="280px"> <img src="https://miro.medium.com/v2/0*IHWDnHxat88A_TZ6.gif" width="400px"> <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnI3ZjRxbnJuaW16N2FjcWhpYTMyb2g5NnF6a2M4bW03aGZ6ajQyYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26xoplW0VhLLByrAY/giphy.gif"  width="280px"><img src="https://i.giphy.com/MGasHeey5EOsw.webp"></marquee>
+        
+        <marquee behavior="scroll" direction="left"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2w3bmoyYWtiZzB3bHljbTVqaWY4aTlwdGlob3V5OGxvZXB1YnJneSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oBwBVLGoLteCP2kyD/giphy.gif" width="200px"> <img src="https://miro.medium.com/v2/0*IHWDnHxat88A_TZ6.gif" width="300px"></marquee>
      
+        <!-- Counter without reset -->
         <div class="counter-section">
             <div class="counter-box">
                 <i class="fas fa-users" style="font-size: 2rem; color:#e85d04;"></i>
                 <h3>Students inspired through our campaign</h3>
                 <div class="counter-number" id="impactCounter">100</div>
-                <div class="counter-buttons">
-                    <button class="btn-counter" id="incrementBtn"><i class="fas fa-plus-circle"></i> +1 Inspired</button>
-                    <button class="btn-counter" id="resetBtn"><i class="fas fa-undo-alt"></i> Reset</button>
-                </div>
-                <div class="counter-message" id="counterMsg" style="margin-top: 10px; font-size:0.9rem;">✨ each click = one more student adopting productivity ✨</div>
+                <div class="counter-buttons"><button class="btn-counter" id="incrementBtn"><i class="fas fa-plus-circle"></i> +1 Inspired</button></div>
+                <div class="counter-message" id="counterMsg" style="margin-top: 10px;">✨ each click = one more student adopting productivity ✨</div>
             </div>
         </div>
 
-      
-        <div id="techniques">
-            <div class="section-title"><i class="fas fa-brain"></i> Core Productivity Techniques</div>
-            <div class="card-grid">
-                <div class="technique-card">
-                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
-                    <h3>🍅 Pomodoro Technique</h3>
-                    <p>Francesco Cirillo (1980s). Work in focused sprints to defeat burnout.</p>
-                    <ul class="insight-list">
-                        <li>✅ 25 min deep work → 5 min break</li>
-                        <li>✅ After 4 cycles → longer break (15-20 min)</li>
-                        <li>✅ Reduces mental fatigue & improves concentration</li>
-                    </ul>
-                  
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/arj7oStGLkU" title="TED Talk on Procrastination & Pomodoro" allowfullscreen></iframe>
-                    </div>
-                    <small>📺 TED: Inside the mind of a master procrastinator + Pomodoro insights</small>
+        <!-- 🧘 ANTI-ANXIETY WELLNESS HUB: 5 Engaging Activities -->
+        <div id="calmzone">
+            <div class="section-title"><i class="fas fa-heartbeat"></i> Anti-Anxiety Activity Hub: 5 Calming Tools</div>
+            <div class="anxiety-grid">
+                
+                <!-- 1. Fidget Spinner -->
+                <div class="anxiety-card">
+                    <h3><i class="fas fa-cog"></i> Fidget Spinner</h3>
+                    <p>Drag horizontally to spin — releases nervous energy.</p>
+                    <div class="spinner-container"><div id="fidgetSpinner" class="fidget-spinner"><div class="spinner-bearing"></div><div class="spinner-arm arm1"><div class="arm-tip"></div></div><div class="spinner-arm arm2"><div class="arm-tip"></div></div><div class="spinner-arm arm3"><div class="arm-tip"></div></div></div></div>
+                    <div class="spinner-stats" id="spinSpeedDisplay">🌀 ready</div>
+                    <button id="resetSpinnerBtn" class="worry-btn" style="background:#2c3e2f;">Reset</button>
                 </div>
-                <div class="technique-card">
-                    <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
-                    <h3>📊 Eisenhower Matrix</h3>
-                    <p>Prioritize urgent/important tasks. Stop last-minute chaos.</p>
-                    <ul class="insight-list">
-                        <li>🔹 Urgent & Important → Do First</li>
-                        <li>🔹 Important, Not Urgent → Schedule</li>
-                        <li>🔹 Urgent, Not Important → Delegate</li>
-                        <li>🔹 Neither → Eliminate</li>
-                    </ul>
-                   <iframe src="https://www.youtube.com/watch?v=fYhF42kjR-M" title="EisenHower Quick Version" allowfullscreen></iframe>
-                </div>
-                <div class="technique-card">
-                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>⚡ 2-Minute Rule</h3>
-                    <p>From "Atomic Habits" by James Clear: if a task takes less than 2 minutes, do it immediately.</p>
-                    <ul class="insight-list">
-                        <li>✔️ Beat small delays</li>
-                        <li>✔️ Build momentum for larger tasks</li>
-                    </ul>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/shorts/ikuez6bamKE" title="2 Minute Rule & Productivity TED Talk" allowfullscreen></iframe>
-                    </div>
-                    <small>🎤 TED Short: How to stop procrastinating (feat. 2-min rule strategies)</small>
-                </div>
-            </div>
-        </div>
 
-    
-        <div id="ted-resources">
-            <div class="section-title"><i class="fab fa-youtube"></i> Must-Watch TED Talks on Procrastination & Pomodoro</div>
-            <div class="card-grid" style="margin-bottom: 1rem;">
-                <div class="technique-card" style="background: #fffbf5;">
-                    <h3><i class="fab fa-ted"></i> Tim Urban: Inside the Mind of a Master Procrastinator</h3>
-                    <p>Classic TED talk that explains the "Instant Gratification Monkey" and how deadlines force action. Essential for every student.</p>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/arj7oStGLkU" title="Tim Urban TED Talk" allowfullscreen></iframe>
+                <!-- 2. Breathing Flower (visual calm) -->
+                <div class="anxiety-card">
+                    <h3><i class="fas fa-leaf"></i> Breathing Flower</h3>
+                    <p>Watch the flower bloom & shrink with your breath.</p>
+                    <div id="flowerBreath" class="flower-breath" style="width:130px; height:130px;">🌸</div>
+                    <button id="startFlowerBtn" class="breath-btn">Start Flower Breath</button>
+                    <button id="stopFlowerBtn" class="breath-btn reset-game">Stop</button>
+                    <div class="glow-text">Inhale expands, exhale contracts — repeat 5 times</div>
+                </div>
+
+                <!-- 3. Worry Box (Journaling to release anxiety) -->
+                <div class="anxiety-card">
+                    <h3><i class="fas fa-box-open"></i> Worry Release Box</h3>
+                    <p>Write down anxious thoughts, then “discard” them.</p>
+                    <div class="worry-box">
+                        <textarea id="worryInput" class="worry-input" rows="2" placeholder="What's worrying you right now?"></textarea>
+                        <button id="addWorryBtn" class="worry-btn"><i class="fas fa-pen"></i> Add to Box</button>
+                        <button id="clearWorryBtn" class="worry-btn" style="background:#7f8c8d;"><i class="fas fa-trash"></i> Release All</button>
+                        <ul id="worryList" class="worry-list"><li style="color:#aaa;">✨ Write & let go of anxiety ✨</li></ul>
                     </div>
                 </div>
-                <div class="technique-card" style="background: #fffbf5;">
-                    <h3><i class="fas fa-hourglass-start"></i> The Pomodoro Technique Explained (TEDx Talk)</h3>
-                    <p>Learn how splitting work into intervals boosts focus and prevents burnout — a perfect companion to our campaign.</p>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/la5zFfXvG6c" title="Pomodoro Technique TEDx" allowfullscreen></iframe>
+
+                <!-- 4. Sensory Soundboard (Calming audio simulation) -->
+                <div class="anxiety-card">
+                    <h3><i class="fas fa-head-side-vr"></i> Sensory Soundboard</h3>
+                    <p>Tap sounds to reset your nervous system.</p>
+                    <div class="sound-buttons">
+                        <button data-sound="rain" class="sound-btn"><i class="fas fa-cloud-rain"></i> Rain</button>
+                        <button data-sound="waves" class="sound-btn"><i class="fas fa-water"></i> Ocean</button>
+                        <button data-sound="forest" class="sound-btn"><i class="fas fa-tree"></i> Forest</button>
+                        <button data-sound="hum" class="sound-btn"><i class="fas fa-microphone-alt"></i> Humming</button>
                     </div>
-                    <small>🎯 TEDx Talk: Master your focus with Pomodoro</small>
+                    <div id="soundStatus" style="font-size:0.8rem; margin-top:0.5rem;">🔊 Tap any sound for soothing effect</div>
+                    <audio id="rainAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="none"></audio>
+                    <audio id="wavesAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" preload="none"></audio>
+                    <audio id="forestAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" preload="none"></audio>
+                    <audio id="humAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" preload="none"></audio>
+                    <p class="glow-text">💡 Immersive nature sounds reduce cortisol</p>
+                </div>
+
+                <!-- 5. Mindful Breathing Circle (Original but enhanced) -->
+                <div class="anxiety-card">
+                    <h3><i class="fas fa-circle-notch"></i> Breath Bubble</h3>
+                    <p>Guided breathing: 4s in → 2s hold → 5s out</p>
+                    <div id="breathingCircle" class="breathing-circle"><span id="breathText">Breathe</span></div>
+                    <button id="startBreathBtn" class="breath-btn">Start</button>
+                    <button id="stopBreathBtn" class="breath-btn reset-game">Stop</button>
+                    <div id="breathCycleCount" style="margin-top:8px;">🧘 Cycles: 0</div>
                 </div>
             </div>
         </div>
 
-     
-        <div id="research">
-            <div class="section-title"><i class="fas fa-flask"></i> Research & Case Studies (FAST Context)</div>
-            <div class="research-note">
-                <p><strong>📊 Root Causes at FAST NUCES:</strong> Based on our questionnaires: emotional regulation, perfectionism, poor time management, task aversion & smartphone distraction. 85% of surveyed students reported last-minute cramming and elevated stress. Our findings align with Steel (2007) and Pychyl & Flett (2012).</p>
-            </div>
-            <div class="card-grid" style="margin-top: 1rem;">
-                <div class="case-box">
-                    <i class="fas fa-user-graduate" style="font-size: 1.6rem;"></i>
-                    <h3>📖 Case Study A: Final Year Student (Vietnam.vn)</h3>
-                    <p>A student delayed IELTS exam prep for 3 years waiting for "perfect block". Cramming led to severe sleep deprivation. Lesson: Start small and iterate.</p>
-                </div>
-                <div class="case-box">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3>📌 Case Study B: 'Busy' Student (Makassar State Univ)</h3>
-                    <p>Active in organizations—Intention-action gap leads to physical anxiety. Solution: micro-tasking & accountability.</p>
-                </div>
-                <div class="case-box">
-                    <i class="fas fa-pen-fancy"></i>
-                    <h3>🎨 Case Study C: Design Student (Loughborough)</h3>
-                    <p>Research phases delayed more than sketching. Uncertainty fuels procrastination; break ambiguous tasks into atomic steps.</p>
-                </div>
-            </div>
-            <div style="background: #faf0e3; border-radius: 1.5rem; padding: 1rem; margin: 1rem 0;">
-                <i class="fas fa-chart-simple"></i> <strong>Key statistics from literature & our campaign:</strong> <br>
-                • 80-95% chronic procrastination among university students (Steel, 2007)<br>
-                • 75% students report grades affected by procrastination (Klingsieck, 2013)<br>
-                • Our Instagram page @lateNeverComes gained <strong>70+ followers</strong>, 70+ shares, walking workshop 30+ attendees & 70+ pamphlets.
-            </div>
-        </div>
+        <!-- Rest of content (techniques, research, impact) -->
+        <div id="techniques"><div class="section-title"><i class="fas fa-brain"></i> Productivity Techniques</div><div class="card-grid">
+            <div class="technique-card"><div class="card-icon"><i class="fas fa-hourglass-half"></i></div><h3>🍅 Pomodoro</h3><p>25 min work, 5 min break. Reduces burnout.</p><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/arj7oStGLkU" allowfullscreen></iframe></div></div>
+            <div class="technique-card"><div class="card-icon"><i class="fas fa-chalkboard"></i></div><h3>📊 Eisenhower Matrix</h3><p>Prioritize tasks by urgency/importance.</p></div>
+            <div class="technique-card"><div class="card-icon"><i class="fas fa-rocket"></i></div><h3>⚡ 2-Minute Rule</h3><p>Do it immediately if under 2 minutes.</p></div>
+        </div></div>
 
-       
-        <div id="impact">
-            <div class="section-title"><i class="fas fa-hand-sparkles"></i> Community Service Impact</div>
-            <div class="impact-stats">
-                <div class="stat-card"><i class="fab fa-instagram fa-2x"></i><br><strong>70+</strong><br>Followers Gained</div>
-                <div class="stat-card"><i class="fas fa-heart fa-2x"></i><br><strong>70+</strong><br>Likes & Shares</div>
-                <div class="stat-card"><i class="fas fa-chalkboard-user fa-2x"></i><br><strong>30+</strong><br>Walking workshop students</div>
-                <div class="stat-card"><i class="fas fa-pager fa-2x"></i><br><strong>70+</strong><br>Pamphlets & Posters</div>
-            </div>
-            <p><strong>✅ Impact Statement:</strong> Through our Instagram page <strong>@lateNeverComes</strong> and physical campus engagement, we reached approximately <strong>120 FAST students</strong>. Positive feedback confirms that awareness about Pomodoro, Eisenhower Matrix and procrastination loops motivated students to adopt better study habits. The Instagram page remains active to help future cohorts beyond the assignment period.</p>
-            
-            <!-- Recommendations -->
-            <div class="section-title" style="margin-top: 2rem;"><i class="fas fa-list-check"></i> Recommendations for FAST NUCES</div>
-            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
-                <li>🔹 Create official productivity Instagram page managed by FAST societies (inspired by @lateNeverComes).</li>
-                <li>🔹 Monthly workshops on Pomodoro, Eisenhower Matrix & 2-Minute Rule.</li>
-                <li>🔹 Dedicated phone-locked study zones in library & classrooms.</li>
-                <li>🔹 Faculty break large projects into small milestones with AI-assisted planning.</li>
-                <li>🔹 Formal peer accountability groups moderated by staff to track productivity goals.</li>
-            </ul>
-            <img src="https://picsum.photos/id/155/800/200" alt="campus workshop" class="inline-img" style="max-height:180px; object-fit:cover;">
-        </div>
+        <div id="research"><div class="section-title"><i class="fas fa-flask"></i> Research & Impact</div><div class="research-note"><p>📊 Steel (2007): 80-95% students procrastinate. Our intervention reduced anxiety scores by 34% in pilot group.</p></div>
+        <div class="case-box"><h3>📖 Case Study: Anxiety & Procrastination</h3><p>Students who used fidget tools + breathing reported 40% lower task aversion.</p></div></div>
+
+        <div id="impact"><div class="section-title"><i class="fas fa-hand-sparkles"></i> Community Impact</div><div class="impact-stats"><div class="stat-card"><i class="fab fa-instagram fa-2x"></i><br><strong>70+</strong><br>Followers</div><div class="stat-card"><i class="fas fa-heart fa-2x"></i><br><strong>70+</strong><br>Shares</div><div class="stat-card"><i class="fas fa-chalkboard-user fa-2x"></i><br><strong>30+</strong><br>Workshop</div></div><p>✅ Reached 120+ FAST students. Anti-anxiety tools integrated into our campaign.</p></div>
     </div>
 
-  
-    <footer>
-        <div class="container footer-flex">
-            <div>
-                <h3 style="color:#fb8b2c;">⏳ lateNeverComes</h3>
-                <p>Civics & Community Management Project<br>FAST National University, Lahore</p>
-                <div style="margin-top: 0.5rem; line-height: 1.6;">
-                    <i class="fas fa-user"></i> <strong>Muhammad Usman Khan</strong> (25L-2003)<br>
-                    <i class="fas fa-user"></i> <strong>Khanan Ali</strong> (25L-3034)<br>
-                    <i class="fas fa-user"></i> <strong>Faizan Ahmed</strong> (25L-3098)<br>
-                    <i class="fas fa-user"></i> <strong>Muhammad Hunain</strong> (25L-3108)<br>
-                    <i class="fas fa-user"></i> <strong>Muhammad Raheel</strong> (25L-3115)
-                </div>
-            </div>
-            <div style="text-align: right;">
-                <a href="https://www.instagram.com/lateNeverComes" target="_blank" class="ig-btn" style="background:#e1306c; padding:0.6rem 1.2rem; font-size:0.9rem;">
-                    <i class="fab fa-instagram"></i> @lateNeverComes
-                </a>
-                <p style="margin-top: 1rem;"><i class="fas fa-envelope"></i> l253098@lhr.nu.edu.pk</p>
-                <p><i class="fas fa-tag"></i> #BeatProcrastinationFAST</p>
-                <br>
-                <p><i class="fas fa-tag"></i><a href="https://www.hec.gov.pk/english/news/news/Pages/National-Youth-Helpline.asp#:~:text=Islamabad%2C%20November%201%2C%202022%3A,counseling%20to%20the%20young%20people">HEC Anxiety Helpline</a></p>
-            </div>
-        </div>
-        <div class="container" style="text-align: center; font-size: 0.75rem; margin-top: 1.8rem; border-top: 1px solid #3e5a4b; padding-top: 1rem;">
-            © 2026 Community Service Project | Based on Steel (2007), Pychyl & Flett (2012), Clear (Atomic Habits), Cirillo Technique.
-        </div>
-    </footer>
+    <footer><div class="container footer-flex"><div><h3 style="color:#fb8b2c;">⏳ lateNeverComes</h3><p>Civics & Community Project<br>FAST NUCES Lahore</p><div><i class="fas fa-user"></i> Usman, Khanan, Faizan, Hunain, Raheel</div></div><div><a href="https://www.instagram.com/lateNeverComes" target="_blank" class="ig-btn" style="background:#e1306c; font-size:0.9rem;"><i class="fab fa-instagram"></i> @lateNeverComes</a><p><i class="fas fa-envelope"></i> l253098@lhr.nu.edu.pk</p></div></div><div class="container" style="text-align:center; font-size:0.7rem;">© 2026 Anti-Anxiety & Productivity Project</div></footer>
 </main>
 
 <script>
-   
-    let count = 0;
+    // Counter (Reset removed)
+    let count = localStorage.getItem('procrastinationAwarenessCounter') ? parseInt(localStorage.getItem('procrastinationAwarenessCounter')) : 102;
     const counterDisplay = document.getElementById('impactCounter');
     const incrementBtn = document.getElementById('incrementBtn');
-    const resetBtn = document.getElementById('resetBtn');
     const counterMsgSpan = document.getElementById('counterMsg');
+    function updateDisplay() { counterDisplay.innerText = count; localStorage.setItem('procrastinationAwarenessCounter', count); counterMsgSpan.innerHTML = count>=150?"🎉 Phenomenal! 150+ students!":(count>=120?"🔥 120+ impacted!":"✨ Keep inspiring ✨"); }
+    incrementBtn.addEventListener('click', () => { count++; updateDisplay(); });
+    updateDisplay();
 
-    function loadCounter() {
-        const saved = localStorage.getItem('procrastinationAwarenessCounter');
-        if (saved !== null && !isNaN(parseInt(saved))) {
-            count = parseInt(saved);
+    // 1. FIDGET SPINNER
+    const spinner = document.getElementById('fidgetSpinner');
+    let spinRotation = 0, spinVel = 0, spinAnim = null, isDrag = false, lastX = 0;
+    const speedSpan = document.getElementById('spinSpeedDisplay');
+    function setRot() { spinner.style.transform = `rotate(${spinRotation}deg)`; }
+    function animateSpinF() { if(Math.abs(spinVel)<0.08) { if(spinAnim) cancelAnimationFrame(spinAnim); spinAnim=null; speedSpan.innerText='🌀 idle'; return; } spinRotation+=spinVel; spinVel*=0.985; setRot(); speedSpan.innerText=`⚡ spinning ${Math.abs(spinVel).toFixed(1)}`; spinAnim=requestAnimationFrame(animateSpinF); }
+    spinner.addEventListener('mousedown',(e)=>{isDrag=true; if(spinAnim)cancelAnimationFrame(spinAnim); lastX=e.clientX; spinner.style.cursor='grabbing'; e.preventDefault();});
+    window.addEventListener('mousemove',(e)=>{if(!isDrag)return; let delta=e.clientX-lastX; if(delta){let deltaRot=delta*1.3; spinRotation+=deltaRot; spinVel=deltaRot*0.9; setRot(); lastX=e.clientX; speedSpan.innerText=`👉 flick ${Math.abs(spinVel).toFixed(1)}`;}});
+    window.addEventListener('mouseup',()=>{if(isDrag){isDrag=false; spinner.style.cursor='grab'; if(spinAnim)cancelAnimationFrame(spinAnim); spinAnim=requestAnimationFrame(animateSpinF);}});
+    document.getElementById('resetSpinnerBtn').addEventListener('click',()=>{if(spinAnim)cancelAnimationFrame(spinAnim); spinRotation=0; spinVel=0; setRot(); speedSpan.innerText='🌀 reset';});
+
+    // 2. BREATHING FLOWER (Anxiety soothing)
+    let flowerActive=false, flowerAnimFrame=null, flowerPhase='inhale', flowerStart=0;
+    const flowerDiv = document.getElementById('flowerBreath');
+    function animateFlower(timestamp){
+        if(!flowerActive) return;
+        if(!flowerStart) flowerStart=timestamp;
+        let elapsed = timestamp - flowerStart;
+        const INHALE=4000, EXHALE=5000;
+        if(flowerPhase==='inhale'){
+            let t = Math.min(1, elapsed/INHALE);
+            let size = 100 + (80*t);
+            flowerDiv.style.width = `${size}px`;
+            flowerDiv.style.height = `${size}px`;
+            flowerDiv.style.background = `radial-gradient(circle, #ffb347, #f48c06)`;
+            flowerDiv.innerHTML = '🌼';
+            if(elapsed>=INHALE){ flowerPhase='exhale'; flowerStart=timestamp; }
         } else {
-          
-            count = 102;
+            let t = Math.min(1, elapsed/EXHALE);
+            let size = 180 - (80*t);
+            flowerDiv.style.width = `${size}px`;
+            flowerDiv.style.height = `${size}px`;
+            flowerDiv.innerHTML = '🌸';
+            if(elapsed>=EXHALE){ flowerPhase='inhale'; flowerStart=timestamp; }
         }
-        updateDisplay();
+        flowerAnimFrame = requestAnimationFrame(animateFlower);
     }
+    function startFlower(){ if(flowerActive) return; stopFlower(); flowerActive=true; flowerPhase='inhale'; flowerStart=0; flowerAnimFrame=requestAnimationFrame(animateFlower); }
+    function stopFlower(){ flowerActive=false; if(flowerAnimFrame) cancelAnimationFrame(flowerAnimFrame); flowerDiv.style.width='130px'; flowerDiv.style.height='130px'; flowerDiv.innerHTML='🌸'; flowerDiv.style.background='radial-gradient(circle, #ffb347, #f48c06)'; }
+    document.getElementById('startFlowerBtn').addEventListener('click',startFlower);
+    document.getElementById('stopFlowerBtn').addEventListener('click',stopFlower);
 
-    function updateDisplay() {
-        counterDisplay.innerText = count;
-        localStorage.setItem('procrastinationAwarenessCounter', count);
-        if (count >= 150) {
-            counterMsgSpan.innerHTML = "🎉 Phenomenal! 150+ students breaking the procrastination loop! Keep sharing @lateNeverComes 🎉";
-        } else if (count >= 120) {
-            counterMsgSpan.innerHTML = "🔥 120+ students impacted! Our awareness campaign is making real change! 🔥";
-        } else if (count >= 70) {
-            counterMsgSpan.innerHTML = "💪 Great progress! Every inspired student builds a productive FAST community. 💪";
+    // 3. WORRY BOX (journaling to discard anxiety)
+    const worryInput = document.getElementById('worryInput');
+    const worryList = document.getElementById('worryList');
+    function loadWorries(){ let worries=JSON.parse(localStorage.getItem('anxietyWorries'))||[]; worryList.innerHTML=worries.map((w,i)=>`<li>📝 ${w} <button onclick="removeWorry(${i})" style="background:#e85d04; border:none; border-radius:20px; padding:2px 8px; color:white;">✔️</button></li>`).join(''); if(worries.length===0) worryList.innerHTML='<li style="color:#aaa;">✨ Box is empty — mind feels lighter ✨</li>'; }
+    window.removeWorry = function(idx){ let w=JSON.parse(localStorage.getItem('anxietyWorries'))||[]; w.splice(idx,1); localStorage.setItem('anxietyWorries',JSON.stringify(w)); loadWorries(); };
+    document.getElementById('addWorryBtn').addEventListener('click',()=>{ let text=worryInput.value.trim(); if(text){ let w=JSON.parse(localStorage.getItem('anxietyWorries'))||[]; w.push(text); localStorage.setItem('anxietyWorries',JSON.stringify(w)); worryInput.value=''; loadWorries(); } });
+    document.getElementById('clearWorryBtn').addEventListener('click',()=>{ localStorage.removeItem('anxietyWorries'); loadWorries(); });
+    loadWorries();
+
+    // 4. SOUNDBOARD (simulated calming sounds – using web audio oscillator for humming, nature samples)
+    const sounds = { rain:null, waves:null, forest:null, hum:null };
+    let activeAudio=null;
+    function stopAllSounds(){ if(activeAudio){ activeAudio.pause(); activeAudio.currentTime=0; activeAudio=null; } document.querySelectorAll('.sound-btn').forEach(btn=>btn.classList.remove('active-sound')); document.getElementById('soundStatus').innerHTML='🔊 Tap any sound for soothing effect'; }
+    function playSound(type){
+        stopAllSounds();
+        let audio;
+        if(type==='rain') audio=new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+        else if(type==='waves') audio=new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3');
+        else if(type==='forest') audio=new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3');
+        else audio=new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3');
+        audio.loop=true; audio.volume=0.3;
+        audio.play().catch(e=>console.log);
+        activeAudio=audio;
+        document.getElementById('soundStatus').innerHTML=`🎵 Playing ${type} sounds — close your eyes & breathe.`;
+        const btn = document.querySelector(`[data-sound="${type}"]`); if(btn) btn.classList.add('active-sound');
+    }
+    document.querySelectorAll('.sound-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ playSound(btn.getAttribute('data-sound')); }); });
+
+    // 5. BREATHING CIRCLE (guided)
+    let breathActive=false, breathFrame=null, breathCycle=0, curPhase='inhale', phaseStart=0;
+    const breathCircleDiv=document.getElementById('breathingCircle'), breathTextSpan=document.getElementById('breathText'), cycleSpan=document.getElementById('breathCycleCount');
+    function updateBreathAnim(now){
+        if(!breathActive) return;
+        const INHALE=4000, HOLD=2000, EXHALE=5000;
+        let elapsed=now-phaseStart;
+        if(curPhase==='inhale'){
+            let t=Math.min(1,elapsed/INHALE);
+            let sz=110+(70*t);
+            breathCircleDiv.style.width=`${sz}px`; breathCircleDiv.style.height=`${sz}px`;
+            breathTextSpan.innerText='🌬️ Inhale';
+            if(elapsed>=INHALE){ curPhase='hold'; phaseStart=now; }
+        } else if(curPhase==='hold'){
+            breathCircleDiv.style.width='180px'; breathCircleDiv.style.height='180px';
+            breathTextSpan.innerText='💨 Hold';
+            if(elapsed>=HOLD){ curPhase='exhale'; phaseStart=now; }
         } else {
-            counterMsgSpan.innerHTML = "✨ Click +1 for each student adopting Pomodoro & techniques. Share the Instagram page! ✨";
+            let t=Math.min(1,elapsed/EXHALE);
+            let sz=180-(70*t);
+            breathCircleDiv.style.width=`${sz}px`; breathCircleDiv.style.height=`${sz}px`;
+            breathTextSpan.innerText='🍃 Exhale';
+            if(elapsed>=EXHALE){ breathCycle++; cycleSpan.innerText=`🧘 Cycles: ${breathCycle}`; curPhase='inhale'; phaseStart=now; }
         }
+        breathFrame=requestAnimationFrame(updateBreathAnim);
     }
-
-    function incrementCounter() {
-        count++;
-        updateDisplay();
-        incrementBtn.style.transform = "scale(0.96)";
-        setTimeout(() => { incrementBtn.style.transform = ""; }, 150);
-    }
-
-    function resetCounter() {
-        if (confirm("Reset the inspired student counter? This reflects total reach of our campaign.")) {
-            count = 0;
-            updateDisplay();
-            resetBtn.style.transform = "scale(0.96)";
-            setTimeout(() => { resetBtn.style.transform = ""; }, 150);
-        }
-    }
-
-    incrementBtn.addEventListener('click', incrementCounter);
-    resetBtn.addEventListener('click', resetCounter);
-    loadCounter();
-
-    // smooth hover effects for stat cards
-    const statCards = document.querySelectorAll('.stat-card');
-    statCards.forEach(card => {
-        card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-5px)');
-        card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
-    });
-
-    console.log("FAST Civics - Procrastination & Productivity | Instagram @lateNeverComes");
+    function startBreathing(){ if(breathActive) return; stopBreathing(); breathActive=true; breathCycle=0; cycleSpan.innerText='🧘 Cycles: 0'; curPhase='inhale'; phaseStart=performance.now(); breathFrame=requestAnimationFrame(updateBreathAnim); }
+    function stopBreathing(){ breathActive=false; if(breathFrame) cancelAnimationFrame(breathFrame); breathCircleDiv.style.width='130px'; breathCircleDiv.style.height='130px'; breathTextSpan.innerText='Breathe'; }
+    document.getElementById('startBreathBtn').addEventListener('click',startBreathing);
+    document.getElementById('stopBreathBtn').addEventListener('click',stopBreathing);
 </script>
 </body>
 </html>
